@@ -30,14 +30,15 @@ const Profile = () => {
           <div className="flex flex-col px-4 text-white">
             <div className="mb-6 flex items-center justify-between">
               <h1 className="mt-4 mb-4 text-xl font-bold">
-                Piotr <br />
-                Maciejewski
+                {session.user.name}
+           
               </h1>
               <div className="flex flex-col items-center justify-center">
                 <div className="relative h-14 w-14 rounded-full border-2 border-yellow-300">
-                  <p className="absolute top-3 left-3 text-[18px] font-bold">
+                  {/* <p className="absolute top-3 left-3 text-[18px] font-bold">
                     PM
-                  </p>
+                  </p> */}
+                  <img src={session.user.image} className="h-full w-full rounded-full" />
                 </div>
               </div>
             </div>

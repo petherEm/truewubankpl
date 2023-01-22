@@ -7,8 +7,6 @@ import { useRouter } from 'next/router'
 
 import { useSession, signIn, signOut } from 'next-auth/react'
 
-import BenefitSummary from '@/components/BenefitSummary'
-
 export default function Home() {
   const { data: session } = useSession()
 
@@ -19,7 +17,7 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-6xl">
       <Head>
-        <title>Western Union Digital Bank App</title>
+        <title>PL: Western Union Digital Bank App</title>
         <meta name="description" content="" />
       </Head>
 
@@ -48,7 +46,7 @@ export default function Home() {
           <div className="mt-8 flex justify-center space-x-8 md:justify-start">
             <button
               onClick={signIn}
-              className="rounded-full bg-yellow-400 px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600"
+              className="rounded-full bg-yellow-400 hover:bg-yellow-600 px-12 py-4 text-xl font-semibold text-black"
             >
               Login
             </button>
@@ -60,42 +58,11 @@ export default function Home() {
       </div>
 
       {/* FEATURES SECTION */}
-      <div className="mt-[50px] flex h-auto min-h-[300px] flex-col items-center justify-center p-2 text-white md:mt-[100px]">
-        <div className="text-center flex flex-col justify-center items-center gap-8 w-[80%]">
-          <h1 className="text-5xl font-bold">
-            Receive money to a{' '}
-            <span className="text-yellow-400">
-              Western Union Digital Banking account
-            </span>
-          </h1>
+      <div className="mt-[50px] flex h-auto min-h-[300px] flex-col items-center justify-between p-2 text-white md:mt-[100px] xl:flex-row">
 
-          <h2 className="text-2xl font-bold">
-            Expecting a money transfer? Earn up to 100 PLN in bonuses when you
-            receive it in your Western Union Digital Banking account!
-          </h2>
-
-          <h2 className="text-2xl">
-            Just download the Western Union Digital Banking app and receive
-            money straight to a Western Union Digital Banking account or
-            redirect cash pickup to your account.
-          </h2>
-
-          <h2 className="text-2xl">
-            You’ll get a <span className="text-yellow-400 font-bold">50 PLN </span> bonus for the first money transfer and <span className="text-yellow-400 font-bold">50 PLN </span>
-            for the second. The offer is valid until March 31, 2023.
-          </h2>
-
-          <button
-            className="rounded-full bg-yellow-400 w-fit px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600"
-          >
-            Download now
-          </button>
-        </div>
-
-        {/* BENEFIT SUMMARY SECTION */}
-
-        <BenefitSummary />
+        <h1>Receive money to a <span>Western Union Digital Banking account</span></h1>
       </div>
+
     </div>
   )
 }
