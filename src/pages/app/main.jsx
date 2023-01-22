@@ -5,6 +5,7 @@ import clsx from 'clsx'
 
 import Welcome from '@/components/screens/Welcome'
 
+
 export default function Main() {
   return (
     <div className="mx-auto md:max-w-6xl">

@@ -2,7 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
+import { useSession, signIn, signOut } from 'next-auth/react'
+
 export function Header() {
+  const { data: session } = useSession()
   const router = useRouter()
 
   return (
@@ -15,12 +18,12 @@ export function Header() {
           {/* <p className="cursor-pointer hover:border-b-2 hover:border-yellow-400">
             Home
           </p> */}
-          <Link
-            href="/bugs"
-            className="cursor-pointer hover:border-b-2 hover:border-yellow-400"
+          <button
+            onClick={signIn}
+            className="rounded-lg bg-yellow-400 hover:bg-yellow-600 px-8 py-3 text-xl font-semibold text-black"
           >
-            Main
-          </Link>
+            Login
+          </button>
         </div>
       </header>
     </>

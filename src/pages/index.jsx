@@ -5,8 +5,14 @@ import clsx from 'clsx'
 import { Header } from '@/components/Header'
 import { useRouter } from 'next/router'
 
+import { useSession, signIn, signOut } from 'next-auth/react'
+
 export default function Home() {
+  const { data: session } = useSession()
+
   const router = useRouter()
+
+  console.log(session)
 
   return (
     <div className="mx-auto max-w-6xl">
@@ -15,12 +21,11 @@ export default function Home() {
         <meta name="description" content="" />
       </Head>
 
-
       <Header />
-      <div className="p-2 mt-[50px] md:mt-[100px] min-h-[300px] h-auto flex flex-col xl:flex-row justify-between items-center text-white">
+      <div className="mt-[50px] flex h-auto min-h-[300px] flex-col items-center justify-between p-2 text-white md:mt-[100px] xl:flex-row">
         <div className="flex-1">
           <div>
-            <h1 className="text-yellow-400 text-4xl md:text-6xl xl:text-6xl font-extrabold italic">
+            <h1 className="text-4xl font-extrabold italic text-yellow-400 md:text-6xl xl:text-6xl">
               Sign up today and get:{' '}
               <span className="text-white">
                 Free Visa Platinum debit card + unlock multiple benefits.
@@ -28,12 +33,20 @@ export default function Home() {
             </h1>
           </div>
           <div>
-            <h2 className="mt-10 font-bold text-xl md:text-2xl xl:text-2xl text-yellow-400">Introducing the new Western Union Digital Banking app.</h2>
-            <h3 className="mt-4 font-bold text-xl md:text-2xl xl:text-2xl">Low fees. High interest rates.</h3>
+            <h2 className="mt-10 text-xl font-bold text-yellow-400 md:text-2xl xl:text-2xl">
+              Introducing the new Western Union Digital Banking app.
+            </h2>
+            <h3 className="mt-4 text-xl font-bold md:text-2xl xl:text-2xl">
+              Low fees. High interest rates.
+            </h3>
           </div>
-          <div className="mt-8 flex justify-center md:justify-start space-x-8">
-            <button className="bg-yellow-400 text-black px-6 py-4 rounded-full text-xl font-semibold">Download now</button>
-            <button onClick={() => router.push('/app/main')} className="bg-yellow-400 text-black px-12 py-4 rounded-full text-xl font-semibold">Login</button>
+          <div className="mt-8 flex justify-center space-x-8 md:justify-start">
+            <button
+              onClick={signIn}
+              className="rounded-full bg-yellow-400 hover:bg-yellow-600 px-12 py-4 text-xl font-semibold text-black"
+            >
+              Login
+            </button>
           </div>
         </div>
         <div className="">
