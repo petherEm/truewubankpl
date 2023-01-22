@@ -28,7 +28,7 @@ const BenefitSummary = () => {
             {/* OFFER 3 */}
             <div className="mt-2 flex h-12 items-center bg-black p-4">
               <h1 className="text-md md:text-lg font-semibold">
-                Free "My Saved Money" account
+                Free &quot;My Saved Money&quot; account
               </h1>
             </div>
             {/* OFFER 4 */}
@@ -58,7 +58,7 @@ const BenefitSummary = () => {
             {/* OFFER 7 */}
             <div className="mt-2 flex h-12 items-center bg-gray-800/60 p-4">
               <h1 className="text-md md:text-lg font-semibold">
-                1.5% interest on 'My Saved Money' account
+                1.5% interest on &quot;My Saved Money&quot; account
               </h1>
             </div>
             {/* OFFER 8 */}
@@ -124,7 +124,7 @@ const BenefitSummary = () => {
             {/* OFFER 3 */}
             <div className="mt-2 flex h-12 items-center bg-black p-4">
               <h1 className="text-md md:text-lg font-semibold">
-                +3% interest on "My Saved Money" account
+                +3% interest on &quot;My Saved Money&quot; account
               </h1>
             </div>
             {/* OFFER 4 */}
@@ -154,7 +154,7 @@ const BenefitSummary = () => {
             {/* OFFER 7 */}
             <div className="mt-2 flex h-12 items-center bg-gray-800/60 p-4">
               <h1 className="text-md md:text-lg font-semibold">
-                1.5% interest on 'My Saved Money' account
+                1.5% interest on &quot;My Saved Money&quot; account
               </h1>
             </div>
           </div>
