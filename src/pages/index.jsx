@@ -24,6 +24,9 @@ export default function Home() {
       </Head>
 
       <Header />
+      <p className="animate-pulse p-2 text-red-400">
+        Not real product | training enhancements purpose only
+      </p>
 
       {/* HERO SECTION */}
 
@@ -76,13 +79,15 @@ export default function Home() {
           </h2>
 
           <h2 className="text-2xl">
-            Wystarczy pobrać aplikację Bankowości Mobilnej Western Union i otrzymywać pieniądze bezpośrednio na swoje konto w Bankowości Mobilnej Western Union lub przekierować odbiór gotówki na swoje konto.
+            Wystarczy pobrać aplikację Bankowości Mobilnej Western Union i
+            otrzymywać pieniądze bezpośrednio na swoje konto w Bankowości
+            Mobilnej Western Union lub przekierować odbiór gotówki na swoje
+            konto.
           </h2>
 
           <h2 className="text-2xl">
-            Otrzymasz{' '}
-            <span className="font-bold text-yellow-400">50 PLN </span> premii
-            za pierwszy przekaz i {' '}
+            Otrzymasz <span className="font-bold text-yellow-400">50 PLN </span>{' '}
+            premii za pierwszy przekaz i{' '}
             <span className="font-bold text-yellow-400">50 PLN </span>
             za drugi. Oferta jest ważna do 31 marca 2023 roku.
           </h2>

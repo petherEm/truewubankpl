@@ -122,7 +122,9 @@ const Welcome = () => {
               >
                 Wpłać pieniądze
               </button>
-              <button className="rounded-full bg-yellow-400 px-4 py-2 text-black hover:bg-yellow-600">
+              <button 
+                onClick={() => router.push('/app/sendmoney')}
+                className="rounded-full bg-yellow-400 px-4 py-2 text-black hover:bg-yellow-600">
                 Wyślij
               </button>
             </div>

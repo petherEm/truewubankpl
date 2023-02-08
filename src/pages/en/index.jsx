@@ -24,6 +24,9 @@ export default function Home() {
       </Head>
 
       <Header />
+      <p className="animate-pulse p-2 text-red-400">
+        Not real product | training enhancements purpose only
+      </p>
 
       {/* HERO SECTION */}
 
@@ -61,7 +64,7 @@ export default function Home() {
 
       {/* FEATURES SECTION */}
       <div className="mt-[50px] flex h-auto min-h-[300px] flex-col items-center justify-center p-2 text-white md:mt-[100px]">
-        <div className="text-center flex flex-col justify-center items-center gap-8 w-[80%]">
+        <div className="flex w-[80%] flex-col items-center justify-center gap-8 text-center">
           <h1 className="text-5xl font-bold">
             Receive money to a{' '}
             <span className="text-yellow-400">
@@ -81,13 +84,14 @@ export default function Home() {
           </h2>
 
           <h2 className="text-2xl">
-            You’ll get a <span className="text-yellow-400 font-bold">50 PLN </span> bonus for the first money transfer and <span className="text-yellow-400 font-bold">50 PLN </span>
+            You’ll get a{' '}
+            <span className="font-bold text-yellow-400">50 PLN </span> bonus for
+            the first money transfer and{' '}
+            <span className="font-bold text-yellow-400">50 PLN </span>
             for the second. The offer is valid until March 31, 2023.
           </h2>
 
-          <button
-            className="rounded-full bg-yellow-400 w-fit px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600"
-          >
+          <button className="w-fit rounded-full bg-yellow-400 px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600">
             Download now
           </button>
         </div>

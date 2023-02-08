@@ -11,7 +11,7 @@ export function Header() {
   return (
     <>
       <header className="mx-auto flex max-w-7xl items-center justify-between p-4">
-        <div onClick={() => router.push('/')} className="cursor-pointer">
+        <div onClick={() => router.push('/')} className="cursor-pointer flex flex-col">
           <Image src="/logo.svg" width="220" height="100" />
         </div>
         <div className="flex items-center justify-between gap-x-6 font-bold text-white">

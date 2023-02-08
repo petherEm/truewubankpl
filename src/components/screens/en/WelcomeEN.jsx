@@ -121,7 +121,9 @@ const WelcomeEN = () => {
               >
                 Add money
               </button>
-              <button className="rounded-full bg-yellow-400 px-4 py-2 text-black hover:bg-yellow-600">
+              <button 
+                onClick={() => router.push('/app/en/sendmoney')}
+                className="rounded-full bg-yellow-400 px-4 py-2 text-black hover:bg-yellow-600">
                 Send
               </button>
             </div>

@@ -35,8 +35,8 @@ const AltFundsin1 = () => {
 
             <div className="mt-8 flex flex-col gap-4 text-black">
               <div
-                onClick={() => router.push('#fundsIn-Card')}
-                className="cursor-pointer rounded-md border-2 border-blue-200 p-4 hover:border-blue-700"
+                onClick={() => router.push('/app/fundsin/card')}
+                className="bg-red-400 cursor-pointer rounded-md border-2 border-blue-200 p-4 hover:border-blue-700"
               >
                 <div className="flex items-start space-x-2">
                   <div className="flex flex-col gap-3">
