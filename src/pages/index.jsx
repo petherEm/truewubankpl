@@ -7,7 +7,7 @@ import { useRouter } from 'next/router'
 
 import { useSession, signIn, signOut } from 'next-auth/react'
 
-import BenefitSummary from '@/components/BenefitSummary'
+import BenefitSummaryPL from '@/components/BenefitSummaryPL'
 
 export default function Home() {
   const { data: session } = useSession()
@@ -31,18 +31,19 @@ export default function Home() {
         <div className="flex-1">
           <div>
             <h1 className="text-4xl font-extrabold italic text-yellow-400 md:text-6xl xl:text-6xl">
-              Sign up today and get:{' '}
+              Zarejestruj się dzisiaj i otrzymaj{' '}
               <span className="text-white">
-                Free Visa Platinum debit card + unlock multiple benefits.
+                Bezpłatną kartę debetową Visa Platinum i wypróbuj różne
+                korzyści.
               </span>
             </h1>
           </div>
           <div>
             <h2 className="mt-10 text-xl font-bold text-yellow-400 md:text-2xl xl:text-2xl">
-              Introducing the new Western Union Digital Banking app.
+              Przedstawiamy nową aplikację Western Union Digital Banking
             </h2>
             <h3 className="mt-4 text-xl font-bold md:text-2xl xl:text-2xl">
-              Low fees. High interest rates.
+              Niskie opłaty. Wysokie odsetki.
             </h3>
           </div>
           <div className="mt-8 flex justify-center space-x-8 md:justify-start">
@@ -50,7 +51,7 @@ export default function Home() {
               onClick={signIn}
               className="rounded-full bg-yellow-400 px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600"
             >
-              Login
+              Zaloguj się
             </button>
           </div>
         </div>
@@ -61,40 +62,39 @@ export default function Home() {
 
       {/* FEATURES SECTION */}
       <div className="mt-[50px] flex h-auto min-h-[300px] flex-col items-center justify-center p-2 text-white md:mt-[100px]">
-        <div className="text-center flex flex-col justify-center items-center gap-8 w-[80%]">
+        <div className="flex w-[80%] flex-col items-center justify-center gap-8 text-center">
           <h1 className="text-5xl font-bold">
-            Receive money to a{' '}
+            Otrzymuj pieniądze na swoje konto w{' '}
             <span className="text-yellow-400">
-              Western Union Digital Banking account
+              Bankowości Mobilnej Western Union
             </span>
           </h1>
 
           <h2 className="text-2xl font-bold">
-            Expecting a money transfer? Earn up to 100 PLN in bonuses when you
-            receive it in your Western Union Digital Banking account!
+            Czekasz na przekaz pieniężny? Zarób do (100 PLN) w premiach1
+            otrzymując go na swoje konto w Bankowości Mobilnej Western Union!
           </h2>
 
           <h2 className="text-2xl">
-            Just download the Western Union Digital Banking app and receive
-            money straight to a Western Union Digital Banking account or
-            redirect cash pickup to your account.
+            Wystarczy pobrać aplikację Bankowości Mobilnej Western Union i otrzymywać pieniądze bezpośrednio na swoje konto w Bankowości Mobilnej Western Union lub przekierować odbiór gotówki na swoje konto.
           </h2>
 
           <h2 className="text-2xl">
-            You’ll get a <span className="text-yellow-400 font-bold">50 PLN </span> bonus for the first money transfer and <span className="text-yellow-400 font-bold">50 PLN </span>
-            for the second. The offer is valid until March 31, 2023.
+            Otrzymasz{' '}
+            <span className="font-bold text-yellow-400">50 PLN </span> premii
+            za pierwszy przekaz i {' '}
+            <span className="font-bold text-yellow-400">50 PLN </span>
+            za drugi. Oferta jest ważna do 31 marca 2023 roku.
           </h2>
 
-          <button
-            className="rounded-full bg-yellow-400 w-fit px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600"
-          >
-            Download now
+          <button className="w-fit rounded-full bg-yellow-400 px-12 py-4 text-xl font-semibold text-black hover:bg-yellow-600">
+            Pobierz teraz
           </button>
         </div>
 
         {/* BENEFIT SUMMARY SECTION */}
 
-        <BenefitSummary />
+        <BenefitSummaryPL />
       </div>
     </div>
   )

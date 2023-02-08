@@ -18,6 +18,8 @@ export function Header() {
           {/* <p className="cursor-pointer hover:border-b-2 hover:border-yellow-400">
             Home
           </p> */}
+          <button onClick={() => router.push('/en')}>EN</button>
+          <button onClick={() => router.push('/')}>PL</button>
           <button
             onClick={signIn}
             className="rounded-lg bg-yellow-400 hover:bg-yellow-600 px-8 py-3 text-xl font-semibold text-black"

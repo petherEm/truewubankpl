@@ -12,13 +12,23 @@ const signIn = ({ providers }) => {
               <Image src="/logo.svg" width="220" height="100" />
             </header>
             <h1 className="mt-8 mb-4 text-4xl font-bold text-yellow-400">
-              Hej!
+              Hi!
             </h1>
-            <h2>Jeszcze jeden krok</h2>
+            <h2>Nice to see you again</h2>
 
             <div className="mt-40 flex flex-col items-center justify-center">
               {Object.values(providers).map((provider) => (
-                <div key={provider.name}>
+                <div key={provider.name} className="flex flex-col items-center justify-center gap-4">
+                  <button
+                    className="rounded-full bg-yellow-400 px-6 py-3 text-xl font-bold text-black hover:bg-yellow-600"
+                    onClick={() =>
+                      SignInToProvider(provider.id, {
+                        callbackUrl: '/app/en/main',
+                      })
+                    }
+                  >
+                    Log in with {provider.name}
+                  </button>
                   <button
                     className="rounded-full bg-yellow-400 px-6 py-3 text-xl font-bold text-black hover:bg-yellow-600"
                     onClick={() =>
@@ -27,7 +37,7 @@ const signIn = ({ providers }) => {
                       })
                     }
                   >
-                    Zaloguj się z {provider.name}
+                    PL: Zaloguj z {provider.name}
                   </button>
                 </div>
               ))}
